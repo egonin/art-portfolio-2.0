@@ -1,0 +1,100 @@
+{
+    "paintings": [
+        {
+            "img_url": "../data/paintings/flash.jpg",
+            "date":"Août 2023",
+            "title":"Flash",
+            "artist": "Emma Casagrande",
+            "size": "",
+            "description": "Un dessin de mon chat, au crayon de charbon."
+        },
+        {
+            "img_url": "../data/paintings/impatience.jpg",
+            "date":"Février 2024",
+            "title":"Longueurs de l'impatience",
+            "artist": "Emma Casagrande",
+            "size": "",
+            "description": "Patience est mère de sureté mais je me languissais de l'attente d'une bonne nouvelle apparue le lendemain de cet élan créatif venant du coeur."
+        },
+        {
+            "img_url": "../data/paintings/laBetiseHumaine.jpg",
+            "date":"Octobre 2023",
+            "title":"La Bêtise humaine",
+            "artist": "Emma Casagrande",
+            "size": "",
+            "description": "Un constat m'a frappé de plein fouet et j'ai eu peur que mon cerveau finisse par avoir la taille d'une crevette qu'un flamand rose de ma Camargue pourrait déguster avec plaisir. "
+        },
+        {
+            "img_url": "../data/paintings/laMontagneSein.jpg",
+            "date":"Février 2024",
+            "title": "La Montagne Sein",
+            "artist": "Emma Casagrande",
+            "size": "",
+            "description": "Une montagne surréaliste quelque peu sensuelle et osée."
+        },
+        {
+            "img_url": "../data/paintings/laPorteDivine.jpg",
+            "date":"Novembre 2023",
+            "title":"La Porte Divine",
+            "artist": "Emma Casagrande",
+            "size": "",
+            "description": "Au milieu de ces montagnes et étendues d'eau, une porte. Devons-nous l'ouvrir ?"
+        },
+        {
+            "img_url": "../data/paintings/lesAidants.jpg",
+            "date":"Novembre 2023",
+            "title":"Les Aidants",
+            "artist": "Emma Casagrande",
+            "size": "",
+            "description": "Les aidants finissent parfois par couler aussi."
+        },
+        {
+            "img_url": "../data/paintings/lesTroisAmes.jpg",
+            "date":"Décembre 2023",
+            "title": "Trois visions d'une même âme",
+            "artist": "Emma Casagrande",
+            "size": "",
+            "description": "Le passé, le présent, le futur d'une même personne."
+        },
+        {
+            "img_url": "../data/paintings/miseEnGardeDuFlamandOmniscient.jpg",
+            "date":"Octobre 2023",
+            "title":"Mise en garde du flamand Omniscient",
+            "artist": "Emma Casagrande",
+            "size": "",
+            "description": "Le flamand rose nous surveille. Garde à vous"
+        },
+        {
+            "img_url": "../data/paintings/flores.jpg",
+            "date":"Août 2024",
+            "title":"Flores",
+            "artist": "Emma Casagrande",
+            "size": "",
+            "description": "Las flores del jardín siempre acaban floreciendo"
+        },
+        {
+            "img_url": "../data/paintings/paysageCotier.jpg",
+            "date":"Janvier 2024",
+            "title" : "Paysage Côtier",
+            "artist": "Emma Casagrande",
+            "size": "",
+            "description": "Un paysage côtier chez mes parents."
+        },
+        {
+            "img_url": "../data/paintings/attentionAuTourbillon.jpg",
+            "date":"Décembre 2023",
+            "title":"Attention au tourbillon",
+            "artist": "Emma Casagrande",
+            "size": "",
+            "description": "Dans une époque tumultueuse, il est facile de perdre pied dans un tourbillon acharné. Un oeil ouvert qui résiste par dessus tout. On finira par y arriver."
+        },
+        {
+            "img_url": "../data/paintings/versLeMieux.jpg",
+            "date":"Août 2023",
+            "title":"Vers le Mieux",
+            "artist": "Emma Casagrande",
+            "size": "",
+            "description": "Le début de tout, l'envie de tendre vers la vérité, la joie de vivre et l'humilité. On met les voiles vers le Mieux."
+        }
+    ]
+}

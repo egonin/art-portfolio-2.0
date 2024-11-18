@@ -1,0 +1,10 @@
+{
+    "scripts": {
+        "dev": "concurrently \"npm run react-dev\" \"npm run backend-api\"",
+        "react-dev": "cd frontend && npm run start",
+        "backend-api": "cd backend/api && uvicorn main:app --reload"
+    },
+    "devDependencies": {
+        "concurrently": "^9.1.0"
+    }
+}

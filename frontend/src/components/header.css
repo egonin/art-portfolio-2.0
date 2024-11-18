@@ -1,0 +1,12 @@
+.header-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(214, 95, 126, 0.929);
+    z-index: 20000;
+  }
