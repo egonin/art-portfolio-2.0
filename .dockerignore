@@ -1,0 +1,39 @@
+# Ignorer les fichiers et répertoires de build de ReactJS
+/frontend/node_modules/
+/frontend/build/
+
+# Ignorer les fichiers de configuration et de cache de Node.js
+/frontend/.env
+/frontend/.cache
+/frontend/package-lock.json
+/frontend/npm-debug.log
+/frontend/portfolio-0.1.0.tgz
+
+# Ignorer les fichiers temporaires et de configuration de Python
+/backend/__pycache__/
+/backend/.venv/
+/backend/.pytest_cache
+/backend/.tox
+/backend/.coverage
+/backend/.env
+/backend/.mypy_cache
+/backend/.vscode
+/backend/*.pyc
+
+# Ignorer les fichiers de logs et de cache généraux
+*.log
+*.bak
+*.swp
+
+# Ignorer les fichiers temporaires générés par l'IDE
+.vscode/
+.idea/
+
+# Ignorer les fichiers système (ex. macOS, Windows)
+.DS_Store
+Thumbs.db
+
+# Ignorer les fichiers liés aux tests ou à la documentation (si nécessaire)
+/tests/
+/docs/
+/node_modules/

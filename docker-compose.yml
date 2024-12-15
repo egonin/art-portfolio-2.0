@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:3000"  # Lancer ReactJS sur le port 3000
+    networks:
+      - app-network
+    environment:
+      - CHOKIDAR_USEPOLLING=true # Option de React pour que le hot reload fonctionne dans Docker
+
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8000:8000"  # Lancer FastAPI sur le port 8000
+    volumes:
+      - ./backend:/app  # Monte le répertoire backend sur /app dans le conteneur
+    environment:
+      - PYTHONUNBUFFERED=1  # Permet d'afficher les logs en temps réel
+    networks:
+      - app-network
+    depends_on:
+      - frontend
+
+networks:
+  app-network:
+    driver: bridge
