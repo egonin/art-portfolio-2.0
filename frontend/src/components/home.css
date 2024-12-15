@@ -1,11 +1,15 @@
-.background-container {
+/* .background-container {
   width: 100%;
-  top: 10;
+  height: 90vh;
+  top: 0;
+  left:0;
+  right:0;
+  bottom:0;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   flex-direction: column;
   background-image: url('./impatience.JPG');
   background-size: cover;
@@ -16,9 +20,64 @@
 
 .contact-form {
   padding: 2rem;
-  max-width: 600px;
+  max-width: 80%;
   margin: 0 auto;
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+} */
+
+.background-container {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('./impatience.JPG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 20;
+  overflow-y: auto; /*pour le scrolling vertical*/
+}
+
+.content-wrapper {
+  text-align: center;
+  color: white;
+}
+
+.name {
+  font-family: 'Abril Fatface';
+  font-size: 4vw;
+  margin-bottom: 20px;
+}
+
+.tagline {
+  font-size: 2vw;
+  margin-top: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .name {
+    font-size: 6vw;
+  }
+
+  .tagline {
+    font-size: 3vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .name {
+    font-size: 8vw;
+  }
+
+  .tagline {
+    font-size: 4vw;
+  }
 }

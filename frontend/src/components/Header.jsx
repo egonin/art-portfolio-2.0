@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Tabs, Tab, Box } from "@mui/material";
+import { AppBar, Toolbar, Tabs, Tab, Box } from "@mui/material";
 import '@fontsource/abril-fatface';
 import { styled } from '@mui/material/styles';
 import "./header.css";
@@ -22,20 +22,33 @@ function Header({ selectedView, setSelectedView }) {
     textTransform: 'none',
     fontFamily: 'Abril Fatface',
     fontWeight: theme.typography.fontWeightRegular,
-    fontSize: 20
+    // fontSize: 20
+    fontSize: { x: '1rem', sm: '3rem' }
     }));
 
     return (
       <div className="header-container">
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-          <Tabs value={value} onChange={handleChange} aria-label="header">
+      {/* <Box sx={{ borderBottom: 1, borderColor: 'divider' }}> */}
+          {/* <Tabs value={value} onChange={handleChange} aria-label="header">
               <StyledTab label="home" value={"home"} />
               <StyledTab label="portfolio" value={"portfolio"}/>
               <StyledTab label="gallery" value={"gallery"}/>
               <StyledTab label="about me" value={"about me"}/>
               <StyledTab label="contact" value={"contact"}/>
+          </Tabs> */}
+      {/* </Box> */}
+      <AppBar position="sticky">
+        <Toolbar>
+          <Tabs value={value} onChange={handleChange} className="header-tabs">
+          <StyledTab label="home" value={"home"} />
+              <StyledTab label="portfolio" value={"portfolio"}/>
+              <StyledTab label="gallery" value={"gallery"}/>
+              <StyledTab label="about me" value={"about me"}/>
+              <StyledTab label="contact" value={"contact"}/>
           </Tabs>
-      </Box>
+        </Toolbar>
+        </AppBar>
+
     </div>
   )
 }

@@ -1,12 +1,96 @@
-.header-container {
+/* .header-container {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: top;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     background: rgba(214, 95, 126, 0.929);
     z-index: 20000;
+    box-sizing: border-box;
+  } */
+
+  /* .header-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(214, 95, 126, 0.929);
+    z-index: 20000;
+    box-sizing: border-box;
+    padding: 10px 20px;
   }
+  
+  .navbar {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+  }
+  
+  .nav-link:hover {
+    color: #f0f0f0;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px 15px;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .nav-link {
+      font-size: 0.9rem;
+    }
+  } */
+
+  /* header.css */
+.header-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(214, 95, 126, 0.929);
+  z-index: 20000;
+  box-sizing: border-box;
+  border: none;
+  padding: 10px 20px;
+}
+
+.header-appbar {
+  background-color: transparent !important;
+  box-shadow: none;
+  border: none;
+}
+.MuiAppBar-root {
+  /* background-color: transparent !important; */
+  box-shadow: none !important;
+  background: rgba(214, 95, 126, 0.7) !important;
+  border: none;
+  width: 100%;
+}
+
+.MuiToolBar-root {
+  border: none;
+  background-color: transparent;
+}

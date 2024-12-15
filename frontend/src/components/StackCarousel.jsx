@@ -13,10 +13,13 @@ function StackCarousel({item}) {
         }
       };
   return ((item!=undefined) ?
-    <Box display={"flex"} sx={{ width: '100%' }} flexDirection={"row"} alignContent={"center"} alignSelf={"center"}>
+    <Box display={"flex"} sx={{ width: '100%' }} flexDirection={{ xs: 'column', md: 'row' }} alignContent={"center"} alignSelf={"center"}>
         <Box flexShrink={0} ><ImageDisplay src={item.img_url} alt={item.title} onLoad={loadNextImage}/></Box>
         <Box flexGrow={1} display="flex" sx={{ width: '50%' }} flexDirection={"column"} alignItems={"center"} alignSelf={"top"} marginLeft={5}>
-            <Typography variant="h3" fontFamily={"Abril FatFace"} color="rgba(241, 203, 213, 0.929)" textAlign={"center"} top={10}>{item.title}</Typography>
+            <Typography variant="h3" fontFamily={"Abril FatFace"} color="rgba(241, 203, 213, 0.929)" textAlign={"center"} top={10} sx={{
+       fontSize: { xs: '24px', sm: '28px', md: '36px' },
+       marginBottom: '20px'
+     }}>{item.title}</Typography>
             <Typography variant="h5" fontFamily={"Abril FatFace"} color="rgba(241, 203, 213, 0.929)" textAlign={"center"}>{item.artist}</Typography>
             <Typography variant="h6" fontFamily={"Abril FatFace"} color="rgba(241, 203, 213, 0.929)" textAlign={"center"}>- {item.date} -</Typography>
             <Typography variant="h7" fontFamily={"Abril FatFace"} color="rgb(255,255,255)" textAlign={"center"}>{item.type}</Typography>

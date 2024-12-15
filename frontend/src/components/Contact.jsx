@@ -41,6 +41,13 @@ function Contact({ selectedView }) {
   console.log('Contact component rendered');
   return (
     <div className="background-container">
+      <Box sx={{ 
+        flex: 1,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+      }}>
       <div className="abril-fatface-regular" style={{ color: 'white', fontSize: '50px' }}>
         Contact me</div>
       <div display={"flex"} flexDirection={"column"} className="contact-form">
@@ -62,6 +69,7 @@ function Contact({ selectedView }) {
           </div>
           {stateMessage && <p>{stateMessage}</p>}
         </form></div>
+        </Box>
     </div>
   )
 };

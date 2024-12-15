@@ -16,8 +16,8 @@ const MyCarousel = ({ items }) => {
   // preloading of the images to avoid loading images issues
   useEffect(() => {
     const preloadImages = async () => {
-      const visibleItemIndices = [currentIndex, (currentIndex + 1) % items.length];
-
+      // const visibleItemIndices = [currentIndex, (currentIndex + 1) % items.length];
+      const visibleItemIndices = getVisibleItemIndices();
       const preloadPromises = visibleItemIndices.map(index =>
         loadImage(items[index])
       );
@@ -30,6 +30,17 @@ const MyCarousel = ({ items }) => {
 
     preloadImages();
   }, [currentIndex]);
+
+  const getVisibleItemIndices = () => {
+    const screenWidth = window.innerWidth || 0;
+    const numItemsToShow = screenWidth <= 600 ? 1 : 2;
+    
+    const indices = [];
+    for (let i = 0; i < numItemsToShow; i++) {
+      indices.push((currentIndex + i) % items.length);
+    }
+    return indices;
+  };
 
   const loadImage = async (item) => {
     return new Promise((resolve, reject) => {
@@ -111,17 +122,17 @@ const MyCarousel = ({ items }) => {
   return (
     <Box
       ref={containerRef}
-      display={"flex"} flexDirection={"horizontal"} alignContent={"center"}
+      display={"flex"} flexDirection={{xs: "column", sm:"row"}} alignContent={"center"}
       sx={{ position: 'relative', width: '100%', overflow: 'hidden' }}>
-      <IconButton onClick={goToPreviousSlide} sx={{ position: 'absolute', top: "40vh", left: 10 }}>
+      <IconButton onClick={goToPreviousSlide} sx={{ position: 'absolute', top: "40vh", left: { xs: 5, sm: 10 }}}>
         <NavigateBeforeIcon fontSize='large' />
       </IconButton>
       {visibleItems.map((item, index) => (
-        <Box className="HOLA-QUE-TAL" key={index} sx={{ width: '50%' }} marginLeft={2} marginRight={2}>
+        <Box className="HOLA-QUE-TAL" key={index} sx={{ width: {xs: '100%', sm:'50%'}, marginLeft:{xs: 1, sm: 2}, marginRight:{xs: 1, sm: 2}}}>
           <StackCarousel item={item} />
         </Box>
       ))}
-      <IconButton onClick={goToNextSlide} sx={{ position: 'absolute', top: "40vh", right: 10 }}>
+      <IconButton onClick={goToNextSlide} sx={{ position: 'absolute', top: "40vh", right: {xs: 5, sm: 10} }}>
         <NavigateNextIcon fontSize="large" />
       </IconButton>
     </Box>
